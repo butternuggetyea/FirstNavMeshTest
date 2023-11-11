@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -10,9 +12,18 @@ public class EnemySpawner : MonoBehaviour
 
     TerrainPosition terrainPosition;
 
+    GameObject game;
+
+    private bool EnoughDead = false;
+    private bool weaponfound = false;
+
+    int EnemysKilled = 0;
+
+    Weapon weapon;
     // Start is called before the first frame update
     void Start()
     {
+        
         terrainPosition = FindAnyObjectByType<TerrainPosition>();
         PlayerPos = GameObject.Find("Player").transform;
     }
@@ -20,16 +31,26 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (weaponfound == true) 
+        {
+            EnemysKilled = weapon.EnemysKilled;
+        }
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
+            
             Debug.Log(PlayerPos.position.x);
             StartCoroutine(SpawnEnemy());
 
+        }
+
+        if (other.gameObject.tag == "Weapon") 
+        {
+            weapon = other.gameObject.GetComponent<Weapon>();
+            weaponfound = true;
         }
 
 
@@ -43,21 +64,32 @@ public class EnemySpawner : MonoBehaviour
             StopAllCoroutines();
 
         }
+        if (other.gameObject.tag == "enemy")
+        {
 
+            Destroy(other.gameObject);
+
+        }
 
     }
 
     IEnumerator SpawnEnemy()
     {
-        int EnemysSpawned = 0;
-        for (int i = 0; i < 100; i++)
+
+
+        for (int i = 0; i < 1; i++)
         {
+            Debug.Log(EnemysKilled);
+            if (EnemysKilled >= 100) {
+                i++;
+            }
             
             i--;
+
             int RandomNum = Random.Range(-25, 25);
             int NumX = RandomNum;
             int NumZ = RandomNum;
-
+            Debug.Log(NumX + PlayerPos.position.x);
   
             if (PlayerPos.position.x + NumX >= terrainPosition.PosX )
             {
@@ -67,9 +99,12 @@ public class EnemySpawner : MonoBehaviour
                     {
                         if (PlayerPos.position.z + NumZ <= terrainPosition.PosZ + 750)
                         {
-                            Debug.Log("spawned");
-                            i++; ;
-                            Instantiate(enemy, new Vector3(PlayerPos.position.x + NumX, 2, PlayerPos.position.z + NumZ), Quaternion.Euler(0, 0, 0));
+                     
+                          Debug.Log("spawned");
+                                  
+                          Instantiate(enemy, new Vector3(PlayerPos.position.x + NumX, 2, PlayerPos.position.z + NumZ), Quaternion.Euler(0, 0, 0));
+                                
+                            
                         }
                     }
                 }

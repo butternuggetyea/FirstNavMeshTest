@@ -368,7 +368,9 @@
 "Assets/ThirdPersonCam.cs"
 "Assets/TopDownCameraMovement.cs"
 "Assets/TopDownPlayerMovement.cs"
+"Assets/Weapon.cs"
 "Assets/weaponController.cs"
+"Assets/WoodDuck.cs"
 "Assets/WorldSpawn.cs"
 -langversion:9.0
 

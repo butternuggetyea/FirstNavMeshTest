@@ -360,6 +360,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1526019923789750796}
+  - component: {fileID: 6775841307626121985}
+  - component: {fileID: 2103329014101365839}
   m_Layer: 7
   m_Name: Object_10
   m_TagString: Untagged
@@ -383,6 +385,42 @@ Transform:
   - {fileID: 1124249417777519158}
   m_Father: {fileID: 2636152641541061010}
   m_LocalEulerAnglesHint: {x: 0.009761877, y: -85.721306, z: 178.22421}
+--- !u!135 &6775841307626121985
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2382826918838448512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2103329014101365839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2382826918838448512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329f888460acc8f45a0cedbc449375d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  maxHealth: 3
+  moveSpeed: 5
 --- !u!1 &2522276227646068662
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +654,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2636152641541061010}
   - component: {fileID: 2619126872791653382}
-  - component: {fileID: 7123559071104562715}
   - component: {fileID: 1229826162560592695}
   - component: {fileID: 8123067462139926732}
   - component: {fileID: 3593696841126357198}
@@ -638,7 +675,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.047653787, w: 0.9988639}
   m_LocalPosition: {x: 375, y: 0.131, z: 350}
-  m_LocalScale: {x: 0.80111265, y: 0.80111265, z: 0.80111265}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5303854213668403595}
@@ -666,21 +703,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7123559071104562715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3449386164269835048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329f888460acc8f45a0cedbc449375d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  maxHealth: 3
-  moveSpeed: 5
 --- !u!54 &1229826162560592695
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -739,11 +761,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 8
+  m_Speed: 5
   m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

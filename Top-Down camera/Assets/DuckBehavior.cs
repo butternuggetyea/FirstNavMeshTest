@@ -14,7 +14,11 @@ public class DuckBehavior : MonoBehaviour
     Transform target;
     Vector3 moveDirection;
 
+   [SerializeField] static int DuckDeaths = 0;
 
+    Weapon weapon;
+
+    private bool FoundWeapon = false;
 
     private void Awake()
     {
@@ -29,14 +33,37 @@ public class DuckBehavior : MonoBehaviour
 
     void Update()
     {
-       
 
-    
 
     }
 
     void FixedUpdate()
     {
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+       
+    
+
+
+    {
+        if (other.gameObject.tag == "Weapon")
+        {
+            if (FoundWeapon == true)
+            {
+                weapon.EnemysKilled = DuckDeaths;
+                if (DuckDeaths >= 100)
+                {
+                    FoundWeapon = false;
+
+                }
+            }
+            DuckDeaths++;
+            Debug.Log("hitDuck");
+            FoundWeapon = true;
+            weapon = other.gameObject.GetComponent<Weapon>();
+        }
 
     }
 

@@ -28,4 +28,8 @@ public class TerrainPosition : MonoBehaviour
 
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+
+    }
 }
