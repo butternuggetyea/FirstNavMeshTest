@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 6148363159821394266}
   - component: {fileID: 7517392381816170666}
   - component: {fileID: 3951305338596089112}
+  - component: {fileID: 3362861159701233896}
+  - component: {fileID: 8748918043046184291}
   m_Layer: 7
   m_Name: GrassTerrain
-  m_TagString: whatIsGround
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -124,3 +126,37 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 0b125e8e6cf063d408335bed10682aaa, type: 2}
   m_BuildHeightMesh: 0
+--- !u!65 &3362861159701233896
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5836789248403286302}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 740, y: 500, z: 740}
+  m_Center: {x: 375, y: 0, z: 375}
+--- !u!114 &8748918043046184291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5836789248403286302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf337b9feb8abd745af86eb8215a7fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4999540574378084480, guid: 0d74b790aa6ff024b8330c2c8b55625b, type: 3}

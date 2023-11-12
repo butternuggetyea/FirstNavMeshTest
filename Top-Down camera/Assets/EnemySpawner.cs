@@ -102,7 +102,7 @@ public class EnemySpawner : MonoBehaviour
                      
                           Debug.Log("spawned");
                                   
-                          Instantiate(enemy, new Vector3(PlayerPos.position.x + NumX, 2, PlayerPos.position.z + NumZ), Quaternion.Euler(0, 0, 0));
+                          Instantiate(enemy, new Vector3(PlayerPos.position.x + NumX, 10, PlayerPos.position.z + NumZ), Quaternion.Euler(0, 0, 0));
                                 
                             
                         }

@@ -20,6 +20,8 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemy.SetDestination(player.position);
+    
         if (InRange) { 
       
          enemy.SetDestination(player.position);}
@@ -29,7 +31,7 @@ public class EnemyFollow : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             InRange = true;
-            Debug.Log("works");
+            Debug.Log("inRange");
 
 
 
