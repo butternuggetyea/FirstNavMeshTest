@@ -24,12 +24,7 @@ public class Weapon : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-        
-    
-    {
-
-    }
+  
 
 
 }

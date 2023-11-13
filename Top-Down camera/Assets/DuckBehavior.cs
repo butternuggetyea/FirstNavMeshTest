@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class DuckBehavior : MonoBehaviour
 {
@@ -16,9 +17,15 @@ public class DuckBehavior : MonoBehaviour
 
    [SerializeField] static int DuckDeaths = 0;
 
+    public int NumOfSoulStones;
+        
     Weapon weapon;
 
     private bool FoundWeapon = false;
+
+    public GameObject SoulStone;
+
+    public GameObject MainObj;
 
     private void Awake()
     {
@@ -60,6 +67,7 @@ public class DuckBehavior : MonoBehaviour
                 }
             }
             DuckDeaths++;
+            TakeDamage(1);
             Debug.Log("hitDuck");
             FoundWeapon = true;
             weapon = other.gameObject.GetComponent<Weapon>();
@@ -73,15 +81,25 @@ public class DuckBehavior : MonoBehaviour
         Debug.Log($"Health is now: {health}");
 
         if (health <= 0) {
-            Destroy(gameObject);
+            for (int i = 0; i < NumOfSoulStones; i++)
+            {
+                StartCoroutine(SpawnSoulStone());
+            }
+            Destroy(MainObj.gameObject);
             onEnemyKilled?.Invoke(this);
-            onEnemyKilled?.Invoke(this);
+            
         
         
         }
-    
-    
     }
+    IEnumerator SpawnSoulStone() {
+
+      
+            Instantiate(SoulStone, new Vector3(this.transform.position.x, this.transform.position.y+3, this.transform.position.z), Quaternion.Euler(0, 0, 0));
+
+        yield return new WaitForSeconds(.5f); }
+
+    
 
     // Update is called once per frame
 

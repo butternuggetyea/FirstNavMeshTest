@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             
-            Debug.Log(PlayerPos.position.x);
+           
             StartCoroutine(SpawnEnemy());
 
         }
@@ -64,13 +64,6 @@ public class EnemySpawner : MonoBehaviour
             StopAllCoroutines();
 
         }
-        if (other.gameObject.tag == "enemy")
-        {
-
-            Destroy(other.gameObject);
-
-        }
-
     }
 
     IEnumerator SpawnEnemy()
