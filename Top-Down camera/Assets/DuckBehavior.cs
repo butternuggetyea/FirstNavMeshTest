@@ -23,10 +23,9 @@ public class DuckBehavior : MonoBehaviour
 
     private bool FoundWeapon = false;
 
-    public GameObject SoulStone;
-
     public GameObject MainObj;
 
+    SoulStoneLogic soulStoneLogic;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -34,13 +33,14 @@ public class DuckBehavior : MonoBehaviour
 
     void Start()
     {
+        soulStoneLogic = FindAnyObjectByType<SoulStoneLogic>();
         health = maxHealth;
         target = GameObject.Find("Player").transform;
     }
 
     void Update()
     {
-
+        
 
     }
 
@@ -83,7 +83,7 @@ public class DuckBehavior : MonoBehaviour
         if (health <= 0) {
             for (int i = 0; i < NumOfSoulStones; i++)
             {
-                StartCoroutine(SpawnSoulStone());
+                StartCoroutine(soulStoneLogic.SpawnSoulStone());
             }
             Destroy(MainObj.gameObject);
             onEnemyKilled?.Invoke(this);
@@ -92,12 +92,7 @@ public class DuckBehavior : MonoBehaviour
         
         }
     }
-    IEnumerator SpawnSoulStone() {
 
-      
-            Instantiate(SoulStone, new Vector3(this.transform.position.x, this.transform.position.y+3, this.transform.position.z), Quaternion.Euler(0, 0, 0));
-
-        yield return new WaitForSeconds(.5f); }
 
     
 

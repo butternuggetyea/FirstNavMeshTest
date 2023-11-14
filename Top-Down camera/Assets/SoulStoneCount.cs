@@ -17,9 +17,11 @@ public class SoulStoneCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Debug.Log(SoulStones);
+        }
     }
-
     private void OnTriggerEnter(Collider other)
     
     {
@@ -27,7 +29,6 @@ public class SoulStoneCount : MonoBehaviour
         {
             Destroy(MainObj.gameObject);
             SoulStones = SoulStones + 1;
-            Debug.Log(SoulStones);
 
         }
     }

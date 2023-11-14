@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoulStoneLogic : MonoBehaviour
 {
-    
+   public GameObject SoulStone;
 
     bool AddStone;
 
@@ -28,5 +28,13 @@ public class SoulStoneLogic : MonoBehaviour
         }
     }
 
+    public IEnumerator SpawnSoulStone()
+    {
+
+
+        Instantiate(SoulStone, new Vector3(this.transform.position.x, this.transform.position.y + 3, this.transform.position.z), Quaternion.Euler(0, 0, 0));
+
+        yield return new WaitForSeconds(.5f);
+    }
 
 }
