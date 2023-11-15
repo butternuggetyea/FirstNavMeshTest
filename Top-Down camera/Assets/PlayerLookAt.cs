@@ -8,9 +8,13 @@ public class PlayerLookAt : MonoBehaviour
     public float SenseY;
 
     public Transform orientation;
+    public Transform playerObj;
 
     float xRotation;
     float yRotation;
+
+    public Camera cam1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,16 +24,57 @@ public class PlayerLookAt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * SenseX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * SenseY;
+        Vector3 mousePosition = Input.mousePosition;
 
-        yRotation -= mouseX;
+        // Cast a ray from the camera to the mouse position
+        Ray ray = Camera.main.ScreenPointToRay(mousePosition);
 
-    
+        // Create a plane at the object's position (you can adjust this if needed)
+        Plane plane = new Plane(Vector3.up, transform.position);
 
-      
+        float hitDistance;
 
-        transform.rotation = Quaternion.Euler(0, yRotation, 0);
-       
+        // Check if the ray intersects the plane
+        if (plane.Raycast(ray, out hitDistance))
+        {
+            // Get the point on the plane where the ray intersects
+            Vector3 targetPoint = ray.GetPoint(hitDistance);
+
+            // Calculate the direction to the target point
+            Vector3 directionToTarget = targetPoint - transform.position;
+
+            // Ignore the y component if you want to rotate only around the Y-axis
+            directionToTarget.y = 0;
+
+            // Create a rotation to face the target direction
+            Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+
+            // Smoothly rotate towards the target rotation
+            float rotationSpeed = 5f; // Adjust this value for desired rotation speed
+            if (Input.GetMouseButton(0))
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            }
+        }
+
+
+
+
+
+
+
+
+        //gameObject.transform.forward
+        Quaternion rotation = transform.rotation;
+
+        // Get the original forward vector (local forward)
+        Vector3 originalForward = Vector3.forward;
+
+        // Rotate the original forward vector using the current rotation
+        Vector3 rotatedForward = rotation * originalForward;
+
+        Vector3 worldRotatedForward = transform.TransformDirection(rotatedForward);
+        Debug.DrawRay(transform.position, worldRotatedForward * 3f, Color.green);
+
     }
 }

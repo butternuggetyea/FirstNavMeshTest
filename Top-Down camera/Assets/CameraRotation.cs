@@ -1,48 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+
 
 public class CameraRotation : MonoBehaviour
 {
-    Transform PlayerPos;
+    public Transform PlayerPos;
 
-    private static int Yrotate;
+    private static float Yrotate = 0;
 
     private float Playerx, Playery, Playerz;
 
     private void Awake()
     {
-        PlayerPos = GameObject.Find("Player").transform;
+        
 
     }
 
 
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.E)) 
         {
-            Yrotate += 20;
-            Playerx = PlayerPos.gameObject.transform.position.x;
-            Playery = PlayerPos.gameObject.transform.position.y;
-            Playerz = PlayerPos.gameObject.transform.position.z;
-            Debug.Log(Playerx);
-            Debug.Log(Playery);
-            Debug.Log(Playerz);
-            Quaternion.Euler(0, Yrotate, 0);
+            Yrotate -= 0.2f;
+
+         
 
         }
-                if (Input.GetKeyDown(KeyCode.Q)) 
+
+        if (Input.GetKeyUp(KeyCode.E))
         {
-            Playerx = PlayerPos.gameObject.transform.position.x;
-            Playery = PlayerPos.gameObject.transform.position.y;
-            Playerz = PlayerPos.gameObject.transform.position.z;
-            Debug.Log(Playerx);
-            Debug.Log(Playery);
-            Debug.Log(Playerz);
-            transform.Rotate(0,-20,0,Space.Self);
-        
+            Yrotate = 0;
+
+
+
         }
 
+        if (Input.GetKeyDown(KeyCode.Q)) 
+        {
+            Yrotate += 0.2f;
+   
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            Yrotate = 0;
+
+
+
+        }
+        transform.RotateAround(PlayerPos.position, Vector3.up, Yrotate);
     }
 }

@@ -367,6 +367,7 @@
 "Assets/EnemyFollow.cs"
 "Assets/EnemySpawner.cs"
 "Assets/PlayerLookAt.cs"
+"Assets/PotionThrow.cs"
 "Assets/SoulStoneCount.cs"
 "Assets/SoulStoneLogic.cs"
 "Assets/TerrainPosition.cs"
