@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchPoint: {fileID: 0}
   projectile: {fileID: 0}
-  launchVelocity: 10
+  launchVelocity: 40
 --- !u!54 &8497882024657269938
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -366,6 +366,8 @@
 "Assets/DuckBehavior.cs"
 "Assets/EnemyFollow.cs"
 "Assets/EnemySpawner.cs"
+"Assets/FrogmanBehavior.cs"
+"Assets/middleman.cs"
 "Assets/PlayerLookAt.cs"
 "Assets/PotionThrow.cs"
 "Assets/SoulStoneCount.cs"

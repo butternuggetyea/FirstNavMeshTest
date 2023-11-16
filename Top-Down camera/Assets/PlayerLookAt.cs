@@ -51,10 +51,9 @@ public class PlayerLookAt : MonoBehaviour
 
             // Smoothly rotate towards the target rotation
             float rotationSpeed = 5f; // Adjust this value for desired rotation speed
-            if (Input.GetMouseButton(0))
-            {
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            }
+       
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime*10);
+            
         }
 
 
