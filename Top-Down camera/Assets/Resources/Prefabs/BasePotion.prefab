@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5545018605139840598}
   - component: {fileID: 8497882024657269938}
   - component: {fileID: 9044426784618525871}
+  - component: {fileID: 2002988214414978016}
   m_Layer: 0
   m_Name: BasePotion
   m_TagString: Weapon
@@ -98,6 +99,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.03
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2002988214414978016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350764695237511912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36df0c9618b977042a6c8c3e7d5b97be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemysKilled: 0
 --- !u!1 &4336478468397910871
 GameObject:
   m_ObjectHideFlags: 0

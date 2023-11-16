@@ -16,4 +16,14 @@ public class PotionThrow : MonoBehaviour
             _projectile.GetComponent<Rigidbody>().velocity = launchPoint.forward * launchVelocity;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "enemy") 
+        {
+        
+        }
+    }
+
+
 }

@@ -57,6 +57,8 @@ public class DuckBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Weapon")
         {
+            Debug.Log("potHit");
+            
             if (FoundWeapon == true)
             {
                 weapon.EnemysKilled = DuckDeaths;
@@ -66,11 +68,12 @@ public class DuckBehavior : MonoBehaviour
 
                 }
             }
-            DuckDeaths++;
+           
             TakeDamage(1);
             Debug.Log("hitDuck");
             FoundWeapon = true;
             weapon = other.gameObject.GetComponent<Weapon>();
+            Destroy(other.gameObject);
         }
 
     }
@@ -86,6 +89,7 @@ public class DuckBehavior : MonoBehaviour
                 StartCoroutine(soulStoneLogic.SpawnSoulStone());
             }
             Destroy(MainObj.gameObject);
+            DuckDeaths++;
             onEnemyKilled?.Invoke(this);
             
         
