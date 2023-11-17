@@ -19,11 +19,11 @@ public class EnemySpawner : MonoBehaviour
 
     int EnemysKilled = 0;
 
-    Weapon weapon;
+    middleman Middleman;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Middleman = FindFirstObjectByType<middleman>();
         terrainPosition = FindAnyObjectByType<TerrainPosition>();
         PlayerPos = GameObject.Find("Player").transform;
     }
@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (weaponfound == true) 
         {
-            EnemysKilled = weapon.EnemysKilled;
+            EnemysKilled = middleman.EnemysKilled;
         }
     }
 
@@ -47,11 +47,7 @@ public class EnemySpawner : MonoBehaviour
 
         }
 
-        if (other.gameObject.tag == "Weapon") 
-        {
-            weapon = other.gameObject.GetComponent<Weapon>();
-            weaponfound = true;
-        }
+
 
 
     }

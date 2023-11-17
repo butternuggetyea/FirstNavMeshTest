@@ -9,13 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4415164141279355411}
-  - component: {fileID: 5545018605139840598}
   - component: {fileID: 8497882024657269938}
   - component: {fileID: 9044426784618525871}
-  - component: {fileID: 2002988214414978016}
+  - component: {fileID: 6245143240923451705}
   m_Layer: 0
   m_Name: BasePotion
-  m_TagString: Weapon
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,28 +28,13 @@ Transform:
   m_GameObject: {fileID: 1350764695237511912}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 6.03, z: 2.74}
-  m_LocalScale: {x: 11.887824, y: 15.053551, z: 11.887824}
+  m_LocalPosition: {x: 1.45, y: 7.33, z: 2.74}
+  m_LocalScale: {x: 52.551315, y: 66.54572, z: 52.551315}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8046211095303699072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5545018605139840598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350764695237511912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c3c869d625cbe247bd12be59340ae19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  launchPoint: {fileID: 0}
-  projectile: {fileID: 0}
-  launchVelocity: 40
 --- !u!54 &8497882024657269938
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -99,7 +83,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.03
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2002988214414978016
+--- !u!114 &6245143240923451705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,10 +92,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1350764695237511912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36df0c9618b977042a6c8c3e7d5b97be, type: 3}
+  m_Script: {fileID: 11500000, guid: 21c560ffa278f0147b56168819dfee1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemysKilled: 0
 --- !u!1 &4336478468397910871
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +109,7 @@ GameObject:
   - component: {fileID: 9109533404562142100}
   m_Layer: 0
   m_Name: pSphere1
-  m_TagString: Weapon
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

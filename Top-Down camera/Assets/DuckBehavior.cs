@@ -21,6 +21,10 @@ public class DuckBehavior : MonoBehaviour
         
     Weapon weapon;
 
+    public GameObject SoulStone;
+
+    middleman Middleman;
+
     private bool FoundWeapon = false;
 
     public GameObject MainObj;
@@ -33,7 +37,7 @@ public class DuckBehavior : MonoBehaviour
 
     void Start()
     {
-        soulStoneLogic = FindAnyObjectByType<SoulStoneLogic>();
+        Middleman = FindFirstObjectByType<middleman>();
         health = maxHealth;
         target = GameObject.Find("Player").transform;
     }
@@ -50,30 +54,17 @@ public class DuckBehavior : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-       
-    
-
 
     {
-        if (other.gameObject.tag == "Weapon")
+        if (other.gameObject.tag == "Potion")
         {
-            Debug.Log("potHit");
             
-            if (FoundWeapon == true)
-            {
-                weapon.EnemysKilled = DuckDeaths;
-                if (DuckDeaths >= 100)
-                {
-                    FoundWeapon = false;
 
-                }
-            }
+            TakeDamage(middleman.TotalDamage);
+            Debug.Log("Hit");
+
            
-            TakeDamage(1);
-            Debug.Log("hitDuck");
-            FoundWeapon = true;
-            weapon = other.gameObject.GetComponent<Weapon>();
-            Destroy(other.gameObject);
+            
         }
 
     }
@@ -86,7 +77,7 @@ public class DuckBehavior : MonoBehaviour
         if (health <= 0) {
             for (int i = 0; i < NumOfSoulStones; i++)
             {
-                StartCoroutine(soulStoneLogic.SpawnSoulStone());
+                StartCoroutine(SpawnSoulStone());
             }
             Destroy(MainObj.gameObject);
             DuckDeaths++;
@@ -97,8 +88,15 @@ public class DuckBehavior : MonoBehaviour
         }
     }
 
+    public IEnumerator SpawnSoulStone()
+    {
 
-    
+
+        Instantiate(SoulStone, new Vector3(this.transform.position.x, this.transform.position.y + 3, this.transform.position.z), Quaternion.Euler(0, 0, 0));
+
+        yield return new WaitForSeconds(.5f);
+    }
+
 
     // Update is called once per frame
 

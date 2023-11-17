@@ -22,36 +22,13 @@ public class EnemyFollow : MonoBehaviour
     {
         enemy.SetDestination(player.position);
     
-        if (InRange) { 
-      
-         enemy.SetDestination(player.position);}
+
     }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            InRange = true;
-            Debug.Log("inRange");
 
 
-
-        }
-    }
-         void OnTriggerExit(Collider other)
-        {
-
-
-            if (other.gameObject.tag == "Player")
-            {
-                InRange = false;
-                Debug.Log("works");
-
-
-
-            }
         }
     
 
     
 
-}
+

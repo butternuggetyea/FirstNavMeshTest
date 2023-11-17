@@ -20,13 +20,6 @@ public class SoulStoneLogic : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player") 
-        {
-            this.transform.position = other.gameObject.transform.position;
-        }
-    }
 
     public IEnumerator SpawnSoulStone()
     {

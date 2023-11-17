@@ -25,12 +25,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6924290898474137365}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.15401107, y: 0.98330873, z: -0.08704744, w: -0.042514116}
-  m_LocalPosition: {x: -0.0030048147, y: -0.0022935194, z: -0.00028873477}
-  m_LocalScale: {x: 0.016878197, y: 0.016878206, z: 0.016878193}
+  m_LocalRotation: {x: -0.15401106, y: 0.98330873, z: -0.08704743, w: -0.042514116}
+  m_LocalPosition: {x: -0.0030048173, y: -0.007677924, z: -0.00054784276}
+  m_LocalScale: {x: 0.018090134, y: 0.045378976, z: 0.03240748}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3703508631765093331}
+  m_Father: {fileID: 1370648410344414018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4271952809503502430
 BoxCollider:
@@ -63,27 +63,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 59.248
+      value: 521.24927
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 59.248
+      value: 521.24927
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 59.248
+      value: 521.24927
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.06599364
+      value: 0.97784
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.306625
+      value: 15.818
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5376873
+      value: 1.5921
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -117,11 +117,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoulStone
       objectReference: {fileID: 0}
+    - target: {fileID: 2876319602487768954, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.47851
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876319602487768954, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14293864
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876319602487768954, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25219387
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876319602487768954, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0019841
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876319602487768954, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0045341
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876319602487768954, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.033249
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -4196952040310456772, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2876319602487768954, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2026467653424362817}
     m_AddedComponents:
@@ -141,9 +165,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5555286027477975619}
   m_SourcePrefab: {fileID: 100100000, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
---- !u!4 &3703508631765093331 stripped
+--- !u!4 &1370648410344414018 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2876319602487768954, guid: a88193ba85154fd48a5ed9b592ffd13a, type: 3}
   m_PrefabInstance: {fileID: 3814329016355056696}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4048263095024603497 stripped
@@ -184,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778a9565d0fde874e86666a7acae46da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoulStone: {fileID: 4048263095024603497}
 --- !u!54 &8435498154291277092
 Rigidbody:
   m_ObjectHideFlags: 0

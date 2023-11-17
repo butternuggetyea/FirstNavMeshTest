@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4144166925372797160}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 872}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: e977116c0b97ec042ae3aa601d446202, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 95bdbbb1d8df9a746ae434badc7c37ce, type: 2}
   m_BuildHeightMesh: 0
 --- !u!65 &1721795885809855281
 BoxCollider:
@@ -146,8 +146,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 740, y: 269.42, z: 740}
-  m_Center: {x: 375, y: 0, z: 375}
+  m_Size: {x: 500, y: 269.42, z: 500}
+  m_Center: {x: 250, y: 0, z: 250}
 --- !u!114 &1844733246432248543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2636152641541061010, guid: 2b755b77d8204644a80470b315094807, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.131
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: 2636152641541061010, guid: 2b755b77d8204644a80470b315094807, type: 3}
       propertyPath: m_LocalPosition.z

@@ -27,8 +27,10 @@ public class SoulStoneCount : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+
             Destroy(MainObj.gameObject);
             SoulStones = SoulStones + 1;
+            Debug.Log(SoulStones);
 
         }
     }
