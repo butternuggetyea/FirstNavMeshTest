@@ -698,6 +698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1829396925}
   - component: {fileID: 1829396926}
+  - component: {fileID: 1829396927}
   m_Layer: 0
   m_Name: WorldSpawner
   m_TagString: Untagged
@@ -730,6 +731,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a906b8e41017fc545a654490879de2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1829396927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829396924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7634a4b8e6fc9204e81cfe8337f8fb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1832676150
@@ -1594,6 +1607,10 @@ PrefabInstance:
       propertyPath: launchPoint
       value: 
       objectReference: {fileID: 547756172}
+    - target: {fileID: 5545018605139840598, guid: c6891aefd3bcfa04f9eaed16263d3ea1, type: 3}
+      propertyPath: launchVelocity
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
